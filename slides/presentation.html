@@ -941,9 +941,9 @@ p, li {
           <p class="mono dim" style="font-size:0.8rem;margin-bottom:0.4rem;">WHY IT MATTERS</p>
           <p style="color:#aaa;font-size:0.9rem;line-height:1.5;">上下文耗尽 = 任务失去记忆<br>主动管理上下文 = 持续工作能力</p>
         </div>
-        <div class="terminal-box" style="padding:1rem 1.2rem;flex:1;">
-          <p class="mono dim" style="font-size:0.8rem;margin-bottom:0.4rem;">PERSISTENT MEMORY</p>
-          <p style="color:#aaa;font-size:0.9rem;line-height:1.5;"><span class="highlight">CLAUDE.md</span> 每次会话自动加载<br><span class="highlight">Auto Memory</span> Claude 自动保存笔记</p>
+        <div class="terminal-box" style="padding:1rem 1.2rem;flex:1;border-color:rgba(255,100,100,0.3);">
+          <p class="mono" style="font-size:0.8rem;margin-bottom:0.4rem;color:#f87171;">MCP TOKEN TRAP</p>
+          <p style="color:#aaa;font-size:0.9rem;line-height:1.5;">200K 预算中 ~15-20K 是固定开销<br><span style="color:#f87171;">5 个 MCP server 开对话前就吃掉 25K tokens</span></p>
         </div>
       </div>
     </div>
@@ -974,8 +974,8 @@ p, li {
           <span class="mono" style="color:#a84;font-size:0.85rem;font-weight:700;letter-spacing:0.1em;">LEVEL 2&nbsp;&nbsp;中级</span>
         </div>
         <div style="display:flex;flex-wrap:wrap;gap:0.8rem;align-items:center;">
-          <span class="mono highlight" style="font-size:0.9rem;background:rgba(100,200,100,0.06);padding:0.25rem 0.8rem;border:1px solid #333;">CLAUDE.md &lt;200 行</span>
-          <span class="mono dim" style="font-size:0.85rem;">精简项目指令，避免超载</span>
+          <span class="mono highlight" style="font-size:0.9rem;background:rgba(100,200,100,0.06);padding:0.25rem 0.8rem;border:1px solid #333;">CLAUDE.md ~2.5K tokens</span>
+          <span class="mono dim" style="font-size:0.85rem;">精简指令，只放 Claude 推断不出的</span>
           <span class="mono highlight" style="font-size:0.9rem;background:rgba(100,200,100,0.06);padding:0.25rem 0.8rem;border:1px solid #333;">Auto Memory</span>
           <span class="mono dim" style="font-size:0.85rem;">跨 session 持久化笔记</span>
           <span class="mono highlight" style="font-size:0.9rem;background:rgba(100,200,100,0.06);padding:0.25rem 0.8rem;border:1px solid #333;">/btw</span>
@@ -1176,8 +1176,8 @@ p, li {
       <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
         <span class="accent" style="font-size: 1.5rem; flex-shrink: 0;">01</span>
         <div>
-          <div class="highlight">Markdown 文件，按需加载到 context</div>
-          <div class="dim" style="font-size: 0.88rem; margin-top: 0.3rem;">不用时不占用 token；需要时一行命令注入</div>
+          <div class="highlight">文件夹，不只是 Markdown — 可含脚本、数据、模板</div>
+          <div class="dim" style="font-size: 0.88rem; margin-top: 0.3rem;">按需加载到 context，不用时不占 token</div>
         </div>
       </div>
       <div class="feature-card" style="display: flex; align-items: flex-start; gap: 1rem;">
@@ -1238,32 +1238,62 @@ p, li {
   </div>
 </section>
 
-<!-- Slide 20: Skills Extensibility -->
+<!-- Slide 20: Anthropic Internal — 9 Skill Categories -->
 <section class="slide">
   <div class="slide-content">
-    <h2>Skills 的可扩展性</h2>
-    <ul class="bullet-list" style="margin-top: 2rem;">
-      <li>
-        <span class="accent mono">writing-skills</span>
-        <span> — 用 TDD 方式创建新 skill</span>
-        <br>
-        <span class="dim" style="margin-left: 1.4rem; font-size: 0.88rem;">先写期望行为，再迭代 skill 内容直到满足测试</span>
-      </li>
-      <li>
-        <span class="accent mono">find-skills</span>
-        <span> — 从开放生态发现并安装 skill</span>
-        <br>
-        <div class="terminal-box" style="margin: 0.6rem 0 0.6rem 1.4rem; font-size: 0.85rem; padding: 0.5rem 1rem;">
-          <span class="dim">$</span> <span class="highlight">npx skills</span> <span class="dim"># 浏览社区 skill 目录</span>
-        </div>
-      </li>
-      <li>
-        <span class="highlight">"你可以构建自己的研究工作流 skill"</span>
-        <br>
-        <span class="dim" style="margin-left: 1.4rem; font-size: 0.88rem;">任何重复性研究流程都可以 skill 化，一次编写，永久复用</span>
-      </li>
-    </ul>
+    <h2>Anthropic 内部 Skills <span class="accent">九大分类</span></h2>
+    <p class="dim" style="font-size: 0.82rem; margin-bottom: 0.8rem;">Source: Thariq Shihipar (@trq212), Claude Code 团队工程师 — 内部几百个活跃 Skills 中提炼</p>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem;">
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">1. 库与 API 参考</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">正确用库/SDK + 踩坑点</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">2. 产品验证</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">Playwright/tmux 验证代码</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">3. 数据获取与分析</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">连接数据/监控体系</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">4. 业务流程自动化</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">standup / ticket / weekly</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">5. 代码脚手架</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">模板生成 + 自然语言需求</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">6. 代码质量与审查</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">adversarial-review / style</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">7. CI/CD 与部署</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">babysit-pr / deploy / rollback</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">8. 运维手册</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">现象 → 排查 → 结构化报告</div>
+      </div>
+      <div class="terminal-box" style="padding: 0.6rem 0.8rem;">
+        <div class="accent mono" style="font-size: 0.8rem; font-weight: 700;">9. 基础设施运维</div>
+        <div class="dim" style="font-size: 0.72rem; margin-top: 0.2rem;">维护操作 + 安全护栏</div>
+      </div>
+    </div>
+    <div style="display: flex; gap: 0.8rem; margin-top: 0.8rem; font-size: 0.78rem;">
+      <div class="terminal-box" style="padding: 0.5rem 0.8rem; flex: 1;">
+        <span class="highlight">description 写「何时触发」</span><span class="dim"> 而非「我是什么」</span>
+      </div>
+      <div class="terminal-box" style="padding: 0.5rem 0.8rem; flex: 1;">
+        <span class="highlight">踩坑点章节</span><span class="dim"> = Skill 中信息量最大的部分</span>
+      </div>
+      <div class="terminal-box" style="padding: 0.5rem 0.8rem; flex: 1;">
+        <span class="highlight">渐进式披露</span><span class="dim"> — 用子目录按需加载</span>
+      </div>
+    </div>
   </div>
+  <p class="mono dim" style="position:absolute;bottom:clamp(0.4rem,1vh,0.8rem);left:clamp(1rem,3vw,3rem);font-size:clamp(0.5rem,0.7vw,0.65rem);opacity:0.4;">Source: Thariq Shihipar, "Lessons from Building Claude Code: How We Use Skills" (2026-03-17)</p>
 </section>
 
 <!-- Slide 21: Sub-agent Introduction -->
@@ -1455,17 +1485,17 @@ Spawn Agent tool <span class="accent">──────────────
       </div>
       <div class="comparison-col good">
         <div class="col-label">Claude Code Agent</div>
-        <div class="terminal-box" style="margin-bottom: 0.8rem; padding: 0.6rem 1rem; font-size: 0.88rem;">
-          <span class="dim">$</span> <span class="highlight">请复现这篇论文的实验</span>
+        <div class="terminal-box" style="margin-bottom: 0.8rem; padding: 0.6rem 1rem; font-size: 0.82rem;">
+          <span class="accent mono" style="font-weight:700;">AReaL 案例</span><span class="dim"> — inclusionAI 分布式 RL 框架</span>
         </div>
         <ul class="bullet-list">
-          <li><span class="accent">自主</span> 探索代码库 + 读论文</li>
-          <li><span class="accent">自主</span> 实现模型架构</li>
-          <li><span class="accent">自主</span> 运行测试 + 调试</li>
-          <li><span class="accent">自主</span> 启动训练 + Loop 监控</li>
-          <li><span class="accent">自主</span> 生成 slides + changelog</li>
+          <li><span class="accent">32 天</span> · 178 session · <span class="highlight">72 万行净增</span></li>
+          <li><span class="accent">零手打代码</span> — 全程 vibe coding</li>
+          <li>Read <span class="highlight">25,000</span> 次 &gt;&gt; Edit <span class="highlight">14,000</span> 次</li>
+          <li>分层配置: CLAUDE.md + rules/ + agents/ + skills/</li>
+          <li><span class="accent">/pr-review</span> 动态专家团队按风险分级审查</li>
         </ul>
-        <div class="highlight" style="margin-top: 0.8rem; font-size: 0.85rem;">1 prompt → 全自主执行</div>
+        <div class="highlight" style="margin-top: 0.8rem; font-size: 0.82rem;">Agent 核心价值 = 理解与导航，不是生成</div>
       </div>
     </div>
   </div>
@@ -1605,15 +1635,20 @@ Spawn Agent tool <span class="accent">──────────────
         </ul>
       </div>
     </div>
-    <div class="terminal-box reveal" style="margin-top: 1.5rem; font-size: 0.82rem; text-align: center; padding: 0.8rem 1.2rem;">
-      <span class="accent mono">Hooks</span>
-      <span class="dim"> &gt; </span>
-      <span class="mono">CLAUDE.md</span>
-      <span class="dim"> (100% 执行，不可绕过) &nbsp;&nbsp;|&nbsp;&nbsp; </span>
-      <span class="accent mono">Skills</span>
-      <span class="dim"> &gt; </span>
-      <span class="mono">CLAUDE.md</span>
-      <span class="dim"> (偶尔需要的知识，按需加载)</span>
+    <div style="display: flex; gap: 0.8rem; margin-top: 1.2rem;">
+      <div class="terminal-box reveal" style="flex: 1; font-size: 0.82rem; text-align: center; padding: 0.8rem 1.2rem;">
+        <span class="accent mono">Hooks</span>
+        <span class="dim"> &gt; </span>
+        <span class="mono">CLAUDE.md</span>
+        <span class="dim"> (100% 执行) &nbsp;|&nbsp; </span>
+        <span class="accent mono">Skills</span>
+        <span class="dim"> &gt; </span>
+        <span class="mono">CLAUDE.md</span>
+        <span class="dim"> (按需加载)</span>
+      </div>
+      <div class="terminal-box reveal" style="font-size: 0.82rem; text-align: center; padding: 0.8rem 1.2rem; border-color: rgba(0,204,204,0.4);">
+        <span class="mono" style="color:#00cccc;">Token 预算: ~2.5K</span>
+      </div>
     </div>
   </div>
   <p class="mono dim" style="position:absolute;bottom:clamp(0.4rem,1vh,0.8rem);left:clamp(1rem,3vw,3rem);font-size:clamp(0.5rem,0.7vw,0.65rem);opacity:0.4;">Source: code.claude.com/docs/en/best-practices</p>
@@ -1846,7 +1881,8 @@ Spawn Agent tool <span class="accent">──────────────
         <div class="terminal-box" style="padding:clamp(0.5rem,1vh,0.8rem) clamp(0.6rem,1.2vw,1rem);">
           <p class="accent mono" style="font-size:clamp(0.6rem,0.9vw,0.75rem);font-weight:700;margin-bottom:clamp(0.3rem,0.6vh,0.5rem);letter-spacing:0.1em;">KEY PEOPLE</p>
           <div class="mono dim" style="font-size:clamp(0.5rem,0.75vw,0.65rem);line-height:1.7;">
-            <div><span class="highlight">@bcherny</span> &mdash; Boris Cherny, Claude Code creator — 10 Tips thread</div>
+            <div><span class="highlight">@trq212</span> &mdash; Thariq Shihipar, Skills 九大分类 (Anthropic 内部实战)</div>
+            <div><span class="highlight">@bcherny</span> &mdash; Boris Cherny, Claude Code creator — 10 Tips</div>
             <div><span class="highlight">@systematicls</span> &mdash; 9 Coding Agent Principles</div>
             <div><span class="highlight">@HiTw93</span> &mdash; Tw93, Claude Code 六层架构深度解析</div>
           </div>
@@ -1857,6 +1893,7 @@ Spawn Agent tool <span class="accent">──────────────
             <div>anthropics/claude-code <span class="highlight">(78.1k stars)</span></div>
             <div>anthropics/skills — Skill Creator Guide</div>
             <div>obra/superpowers — 完整开发工作流 (14 Skills + Subagent-Driven Dev)</div>
+            <div>inclusionAI/AReaL — 32天零手打代码构建分布式 RL 框架</div>
             <div>affaan-m/everything-claude-code</div>
           </div>
         </div>
