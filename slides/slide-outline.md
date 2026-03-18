@@ -1,4 +1,4 @@
-# Slide Outline: AI Research Cloud Code Best Practice
+# Slide Outline: AI Research Claude Code Best Practice
 
 Style: Terminal Green (developer-focused, monospace, dark terminal aesthetic)
 Target: 38 slides
@@ -8,7 +8,7 @@ Target: 38 slides
 ## Opening (Slides 1-3)
 
 ### Slide 1: Title
-- Title: "AI Research Cloud Code Best Practice"
+- Title: "AI Research Claude Code Best Practice"
 - Subtitle: "From Assistant to Agent — a paradigm shift for AI researchers"
 - Author + Date
 

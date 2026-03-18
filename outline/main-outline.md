@@ -1,12 +1,11 @@
-# AI Research Cloud Code Best Practice — Talk Outline
+# AI Research Claude Code Best Practice — Talk Outline
 
-## Core Thesis
+## 核心观点
 
-> This is NOT about which IDE has a better model.
-> This is a **paradigm shift** — from Assistant to ReAct-paradigm Agent harness.
+> 这不是在比哪个 IDE 接了更好的模型。
+> 重点是工作方式变了——从"问答助手"变成"自主跑任务的 Agent"。
 
-Target audience: AI researchers still anchored in Cursor-style IDE thinking,
-who believe "same model = same outcome regardless of harness."
+给谁看：还停留在 Cursor 式 IDE 思维的 AI 研究者，觉得"模型一样，套什么壳都一样"。
 
 ---
 
@@ -77,11 +76,10 @@ who believe "same model = same outcome regardless of harness."
 
 ---
 
-## Guiding Principle
+## 做这个分享的原则
 
-Create **concrete, compelling scenarios** that demonstrate how Claude Code features
-(Loop, Hook, Sub-agent, Skills) deliver unique value for AI Research —
-things that are structurally impossible in an Assistant-paradigm tool.
+用真实场景说话。每个 demo 都要让人看到：Loop、Hook、Sub-agent、Skills 能干什么，
+而这些事在问答式助手里根本做不了。
 
 ---
 

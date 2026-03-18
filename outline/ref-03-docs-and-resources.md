@@ -7,21 +7,19 @@
 
 ## 1. Harness Engineering Concepts
 
-### What is Harness Engineering?
+### Harness Engineering 是什么？
 
-The shift from "prompt engineering" (optimizing what you say to the model) to
-"harness engineering" (optimizing the **system around** the model):
+不再只是想怎么写 prompt，而是想怎么搭模型周围的系统：
 
-- CLAUDE.md as project-level instruction layer
-- Hook scripts as behavioral guardrails
-- Skills as reusable domain knowledge packages
-- Subagent architecture for context management
-- Pipeline state machines for workflow automation
+- CLAUDE.md 写项目级规则
+- Hook 脚本做自动检查
+- Skills 存可复用的领域知识
+- Subagent 管 context
+- Pipeline 状态机跑工作流
 
-### Key Insight for the Talk
-> In Cursor, you engineer prompts.
-> In Claude Code, you engineer the harness.
-> The model is the same — the difference is what **surrounds** it.
+### 分享的核心一句话
+> 在 Cursor 里你优化 prompt，在 Claude Code 里你搭 harness。
+> 模型没变，变的是模型周围的东西。
 
 ---
 

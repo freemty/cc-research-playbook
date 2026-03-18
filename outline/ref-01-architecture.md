@@ -15,7 +15,7 @@
 | Usage | You write code, AI reviews | You describe goal, AI plans and implements |
 | Feedback Loop | Depends on user judgment | Self-verifies (run tests, compare screenshots) |
 
-Core principle: **"Delegate, don't dictate"** — give goals and context, let Claude decide execution steps.
+说白了就是：你给目标和背景，Claude 自己决定怎么做。不用你一步步指挥。
 
 ---
 
@@ -58,10 +58,10 @@ Key characteristics:
 - Claude works autonomously but stays responsive to user input
 - Each tool call result feeds back into the loop, guiding next decision
 
-### Why this matters for AI Research:
-- Multi-step experiments: gather data → run experiment → analyze results → iterate
-- Autonomous codebase exploration: understand unfamiliar paper implementations
-- Self-directed debugging: find bug → hypothesize → test → fix → verify
+### 对科研有什么用：
+- 跑实验本来就是多步骤的：收数据 → 跑实验 → 看结果 → 改了再跑
+- 看别人的论文代码：让 Claude 自己翻代码库搞清楚结构
+- 调 bug：Claude 自己猜原因、测试、修、验证
 
 ---
 
@@ -96,7 +96,7 @@ Extension mechanisms:
 
 ---
 
-## 5. Context Management (The Most Critical Resource)
+## 5. Context 管理
 
 Context window contains:
 - Conversation history

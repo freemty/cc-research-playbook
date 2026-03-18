@@ -1,10 +1,10 @@
-# AI Research Cloud Code Best Practice
+# AI Research Claude Code Best Practice
 
-A guide on best practices for using Cloud Code (Claude Code) in AI research workflows.
+给 AI 研究者的 Claude Code 实战指南。
 
 ## Overview
 
-This repository contains materials for a presentation/talk on how to effectively leverage Cloud Code as an AI researcher's companion tool.
+这个 repo 是一次分享的素材：怎么把 Claude Code 用到科研日常里，从跑实验、写论文到管 pipeline。
 
 ## Structure
 

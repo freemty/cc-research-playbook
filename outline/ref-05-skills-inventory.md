@@ -24,7 +24,7 @@
 | **slides-dispatch** | Thin dispatcher for slide generation — delegates to subagent, keeps main context clean | Demo: subagent delegation pattern (core talk material) |
 | **agent-slides** | ML experiment analysis slides — cross-comparison tables, recall/FPR tables, heatmaps, case studies | Demo: auto-generated experiment result presentations |
 | **frontend-slides** | Animation-rich HTML presentations, PPT-to-web conversion | Demo: zero-dependency single-file presentations |
-| **frontend-design** | Production-grade frontend interfaces with distinctive design | Supporting: UI for research dashboards |
+| **frontend-design** | 生成前端页面，审美不错 | Supporting: 做实验 dashboard 之类 |
 
 ### C. Writing & Editing (4 skills)
 
@@ -71,7 +71,7 @@ Priority selection for showcasing in the talk:
 3. **writing-skills** — Meta: how to create skills (shows extensibility)
 
 ### Should-Show (strong AI Research value)
-4. **fars-system** — Full autonomous research system (impressive scale)
+4. **fars-system** — 完整的自主科研系统（8 个 agent 并行跑）
 5. **notebooklm** — Document-grounded research answers
 6. **weekly-progress** — Automated research reporting
 7. **humanizer** / **Humanizer-zh** — Paper polishing

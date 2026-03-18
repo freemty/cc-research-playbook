@@ -56,7 +56,7 @@ Manual control via `pipeline-ctl.sh {status|set|skip|reset}`.
 
 ## 2. Skills System — Reusable Domain Knowledge
 
-Skills = markdown files loaded on-demand into context. They encode **institutional knowledge** that would otherwise be lost between sessions.
+Skills 就是按需加载到 context 里的 markdown 文件。把你反复要用的知识写进去，下次开 session 不用重新解释。
 
 ### Research-Critical Skills
 
@@ -76,7 +76,7 @@ Skills = markdown files loaded on-demand into context. They encode **institution
 |-------|---------|---------------|
 | `slides-dispatch` | Thin dispatcher for slide generation | Context-clean delegation pattern |
 | `agent-slides` | Experiment slides structure template | Multi-factor benchmarks, ablation studies |
-| `frontend-slides` | HTML/CSS visual style guide | Stunning presentation generation |
+| `frontend-slides` | 生成带动画的 HTML 演示文稿 | 单文件、无框架依赖 |
 | `commit-changelog` | Git commit and changelog | Structured research progress tracking |
 | `writing-skills` | Skill creation and editing | Meta-skill for building new workflows |
 | `notebooklm` | Query Google NotebookLM | Source-grounded, citation-backed answers |
@@ -198,4 +198,4 @@ dev → skill-update → experiment → monitoring → analysis → commit → d
 | analysis | slides generated | /commit-changelog |
 | commit | always reminds | /commit-changelog, then reset to dev |
 
-This demonstrates how Hooks + Skills + Subagents combine into an **autonomous research workflow** — something fundamentally impossible in an Assistant-paradigm tool.
+Hooks + Skills + Subagents 组合起来就是一个自动化的科研工作流。问答式助手做不到这件事。
