@@ -1,4 +1,4 @@
-# AI Research Claude Code Best Practice — Talk Outline
+# cc-research-playbook — Talk Outline
 
 ## 核心观点
 

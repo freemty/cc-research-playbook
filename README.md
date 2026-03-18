@@ -1,24 +1,22 @@
-# AI Research Claude Code Best Practice
+# cc-research-playbook
 
-给 AI 研究者的 Claude Code 实战指南。
+给 AI 研究者的 Claude Code 实战指南。从 Assistant 到 Agent 的范式转换。
 
-## Overview
+## 这是什么
 
-这个 repo 是一次分享的素材：怎么把 Claude Code 用到科研日常里，从跑实验、写论文到管 pipeline。
+一次分享的全部素材：怎么把 Claude Code 用到科研日常里，从跑实验、写论文到管 pipeline。
 
-## Structure
+## 结构
 
 ```
-.
-├── README.md
-├── outline/          # Talk outlines and notes
-├── examples/         # Code examples and demos
-└── slides/           # Presentation materials
+outline/     # 分享大纲 + 参考文档
+slides/      # 中英双语幻灯片 (HTML)
+demos/       # 4 个可跑的 demo
+  hook-guardrail/     Hook 保护机制
+  loop-monitor/       循环监控
+  skill-experiment/   Skill 实验
+  subagent-needle/    Subagent 大海捞针
 ```
-
-## Topics (TBD)
-
-- Coming soon — outlines will be added as they are finalized.
 
 ## Author
 

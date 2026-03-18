@@ -1,4 +1,4 @@
-# Slide Outline: AI Research Claude Code Best Practice
+# Slide Outline: cc-research-playbook
 
 Style: Terminal Green (developer-focused, monospace, dark terminal aesthetic)
 Target: 38 slides
@@ -8,7 +8,7 @@ Target: 38 slides
 ## Opening (Slides 1-3)
 
 ### Slide 1: Title
-- Title: "AI Research Claude Code Best Practice"
+- Title: "CC Research Playbook"
 - Subtitle: "From Assistant to Agent — a paradigm shift for AI researchers"
 - Author + Date
 
