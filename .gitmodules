@@ -1,4 +1,0 @@
-[submodule "cc-native-research-template"]
-	path = cc-native-research-template
-	url = https://github.com/freemty/cc-native-research-template.git
-	branch = dev

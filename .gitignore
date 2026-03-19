@@ -12,23 +12,13 @@ Thumbs.db
 .env
 .env.local
 
-# Node
-node_modules/
-dist/
-build/
-
 # Python
 __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
 
-# Misc
-*.log
+# Claude Code
 .claude/
-
-# Demo generated files
-demos/subagent-needle/haystack/
-demos/loop-monitor/training.log
-**/__pycache__/
-**/.pytest_cache/
+.superpowers/

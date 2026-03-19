@@ -1,21 +1,21 @@
-# cc-research-playbook
+# CC Research Playbook
 
-给 AI 研究者的 Claude Code 实战指南。从 Assistant 到 Agent 的范式转换。
-
-## 这是什么
-
-一次分享的全部素材：怎么把 Claude Code 用到科研日常里，从跑实验、写论文到管 pipeline。
+AI Researcher 的 Claude Code CLI Agent 实践指南。
 
 ## 结构
 
 ```
-outline/     # 分享大纲 + 参考文档
-slides/      # 中英双语幻灯片 (HTML)
-demos/       # 4 个可跑的 demo
-  hook-guardrail/     Hook 保护机制
-  loop-monitor/       循环监控
-  skill-experiment/   Skill 实验
-  subagent-needle/    Subagent 大海捞针
+slides/           # 中英双语幻灯片 (HTML fragments + CSS + 构建产物)
+  build.sh        # 构建脚本: ./build.sh (中文) 或 ./build.sh en (英文)
+docs/
+  references.md   # 所有参考链接 + TLDR
+```
+
+## 快速开始
+
+```bash
+cd slides && ./build.sh
+open presentation.html
 ```
 
 ## Author
