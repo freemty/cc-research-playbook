@@ -471,7 +471,7 @@ p, li {
 <body>
     <div class="progress-bar" id="progressBar"></div>
     <nav class="nav-dots" id="navDots"></nav>
-    <div class="slide-counter mono dim" id="slideCounter" style="position:fixed;bottom:clamp(0.5rem,1.5vh,1rem);right:clamp(0.8rem,2vw,1.5rem);font-size:clamp(0.6rem,0.8vw,0.75rem);z-index:1000;opacity:0.5;">1 / 25</div>
+    <div class="slide-counter mono dim" id="slideCounter" style="position:fixed;bottom:clamp(0.5rem,1.5vh,1rem);right:clamp(0.8rem,2vw,1.5rem);font-size:clamp(0.6rem,0.8vw,0.75rem);z-index:1000;opacity:0.5;">1 / 26</div>
 
 <!-- ============================================================
      Opening — Slide 1 (Title only)
@@ -1672,6 +1672,79 @@ p, li {
     <a href="https://github.com/freemty/labmate">github.com/freemty/labmate ↗</a> &ensp;|&ensp; First user: PostTrainBench — 迭代 auto post-training 的 agent
   </p>
 </section>
+
+<!-- Slide: Data-Driven Skill Creation via /insights -->
+<section class="slide" id="slide-insights-skills">
+  <div class="slide-content">
+    <h2>数据驱动的 <span class="accent">Skill 生成</span></h2>
+    <p class="dim" style="font-size:0.9rem;margin-top:-0.3rem;">
+      用 <span class="mono highlight">/insights</span> 分析历史对话 → 自动发现高频痛点 → 生成 Skill 建议
+    </p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:1.2rem;">
+      <!-- Left: The Process -->
+      <div style="display:flex;flex-direction:column;gap:0.8rem;">
+        <div class="terminal-box" style="padding:1rem 1.2rem;">
+          <p class="accent mono" style="font-size:0.8rem;font-weight:700;margin-bottom:0.5rem;">PROCESS</p>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;font-size:0.88rem;color:#2D2D40;">
+            <div style="display:flex;gap:0.6rem;align-items:flex-start;">
+              <span class="accent mono" style="flex-shrink:0;">1.</span>
+              <span><span class="mono highlight">/insights</span> 分析 92 sessions 的对话历史</span>
+            </div>
+            <div style="display:flex;gap:0.6rem;align-items:flex-start;">
+              <span class="accent mono" style="flex-shrink:0;">2.</span>
+              <span>识别高频操作、重复摩擦、失败模式</span>
+            </div>
+            <div style="display:flex;gap:0.6rem;align-items:flex-start;">
+              <span class="accent mono" style="flex-shrink:0;">3.</span>
+              <span>生成 Skill + Hook + Cron 建议（含优先级）</span>
+            </div>
+            <div style="display:flex;gap:0.6rem;align-items:flex-start;">
+              <span class="accent mono" style="flex-shrink:0;">4.</span>
+              <span>实现 → 部署 → 下一轮 insights 验证效果</span>
+            </div>
+          </div>
+        </div>
+        <div class="terminal-box" style="padding:0.8rem 1rem;border-color:rgba(196,112,79,0.35);">
+          <p style="font-size:0.88rem;color:#2D2D40;text-align:center;">
+            又一个 <span class="highlight">Meta Layer</span>：<br>
+            用 AI 分析你的 AI 使用模式 → 生成更好的 AI 工作流
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Example Output -->
+      <div class="terminal-box" style="padding:1rem 1.2rem;">
+        <p class="mono dim" style="font-size:0.75rem;letter-spacing:0.1em;margin-bottom:0.6rem;">EXAMPLE: TOP SKILL RECOMMENDATIONS</p>
+        <div style="display:flex;flex-direction:column;gap:0.5rem;">
+          <div class="terminal-box" style="padding:0.5rem 0.8rem;">
+            <span class="accent mono" style="font-size:0.82rem;font-weight:700;">/fleet-monitor</span>
+            <span class="dim" style="font-size:0.78rem;"> — 30 次 monitor 操作 → GPU 集群健康巡检</span>
+          </div>
+          <div class="terminal-box" style="padding:0.5rem 0.8rem;">
+            <span class="accent mono" style="font-size:0.82rem;font-weight:700;">/web-extract</span>
+            <span class="dim" style="font-size:0.78rem;"> — #1 摩擦源 → URL 智能路由，跳过 fallback</span>
+          </div>
+          <div class="terminal-box" style="padding:0.5rem 0.8rem;">
+            <span class="accent mono" style="font-size:0.82rem;font-weight:700;">/session-wrap</span>
+            <span class="dim" style="font-size:0.78rem;"> — 23 次 git 操作 → 标准化收尾仪式</span>
+          </div>
+          <div class="terminal-box" style="padding:0.5rem 0.8rem;">
+            <span class="accent mono" style="font-size:0.82rem;font-weight:700;">/exp-resume</span>
+            <span class="dim" style="font-size:0.78rem;"> — 166 篇论文多轮 → 断点续跑自动化</span>
+          </div>
+          <div class="terminal-box" style="padding:0.5rem 0.8rem;">
+            <span class="accent mono" style="font-size:0.82rem;font-weight:700;">URL Router Hook</span>
+            <span class="dim" style="font-size:0.78rem;"> — PreToolUse 拦截 → 事前路由替代事后补救</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mono dim" style="position:absolute;bottom:clamp(0.4rem,1vh,0.8rem);left:clamp(1rem,3vw,3rem);font-size:clamp(0.5rem,0.7vw,0.65rem);opacity:0.4;">
+    Workflow: <a href="https://x.com/JamesAI/status/2028269700376097108">@JamesAI — /insights → Skills pipeline ↗</a>
+  </p>
+</section>
 <!-- ============================================================
      Part 3: 实用技巧 (3 slides)
      ============================================================ -->
@@ -1934,6 +2007,7 @@ p, li {
             <div><a href="https://x.com/systematicls" style="color:var(--accent);text-decoration:none;">@systematicls</a> <span class="dim">&mdash; 9 Coding Agent Principles</span></div>
             <div><a href="https://x.com/HiTw93/status/2032091246588518683" style="color:var(--accent);text-decoration:none;">@HiTw93</a> <span class="dim">&mdash; Tw93, Claude Code 六层架构深度解析</span></div>
             <div><a href="https://zhuanlan.zhihu.com/p/2003269671630165191" style="color:var(--accent);text-decoration:none;">AReaL</a> <span class="dim">&mdash; 32 天零手打代码构建分布式 RL 框架 (知乎)</span></div>
+            <div><a href="https://x.com/JamesAI/status/2028269700376097108" style="color:var(--accent);text-decoration:none;">@JamesAI</a> <span class="dim">&mdash; /insights → Skills pipeline 数据驱动工作流</span></div>
           </div>
         </div>
         <div class="terminal-box" style="padding:clamp(0.5rem,1vh,0.8rem) clamp(0.6rem,1.2vw,1rem);">
