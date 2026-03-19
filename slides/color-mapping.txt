@@ -1,0 +1,67 @@
+=====================================================
+  Inline Color Mapping: Terminal Green -> Academic Light
+=====================================================
+
+Usage: Search-and-replace inline style colors in ch-*.html files.
+       Left = dark theme value found in HTML, Right = light theme replacement.
+
+DARK (Terminal Green)          ->  LIGHT (Academic Light)
+-----------------------------------------------------
+
+TEXT COLORS
+  #eee                         ->  #1A1A2E        (bright text -> dark primary)
+  #ccc                         ->  #2D2D40        (body text -> dark secondary)
+  #aaa                         ->  #6B6B7B        (muted text -> medium gray)
+  #888                         ->  #8E8E9A        (dim text -> light gray)
+  #666                         ->  #9CA3AF        (very dim -> soft gray)
+  #555                         ->  #9CA3AF        (very dim -> soft gray)
+
+ACCENT / HIGHLIGHT COLORS
+  #4ade80                      ->  #C4704F        (green accent -> terra cotta)
+  #4a9                         ->  #16A34A        (teal-green -> academic green)
+  #48a                         ->  #2563EB        (blue -> academic blue)
+  #a84                         ->  #C4704F        (amber -> terra cotta)
+  #f87171                      ->  #DC6868        (red warning -> muted red)
+
+BORDER COLORS
+  #333 (border)                ->  #E0DED8        (dark border -> light warm gray)
+  #222 (border)                ->  #E8E8E4        (darker border -> lighter warm gray)
+
+RGBA GREEN ACCENTS (border-color / color)
+  rgba(0,255,102,0.4)          ->  rgba(196,112,79,0.35)   (green border -> terra cotta border)
+  rgba(0,255,102,0.3)          ->  rgba(196,112,79,0.25)   (green border -> terra cotta border)
+  rgba(0,255,102,0.5)          ->  rgba(196,112,79,0.40)   (green accent -> terra cotta accent)
+  color:rgba(0,255,102,0.5)    ->  rgba(196,112,79,0.40)   (green text -> terra cotta text)
+
+RGBA BACKGROUNDS
+  rgba(0,255,102,0.03)         ->  rgba(196,112,79,0.04)   (green tint bg -> terra cotta tint)
+  rgba(68,170,153,0.1)         ->  rgba(22,163,74,0.08)    (teal bg -> academic green bg)
+  rgba(68,136,170,0.1)         ->  rgba(37,99,235,0.08)    (blue bg -> academic blue bg)
+  rgba(170,136,68,0.1)         ->  rgba(196,112,79,0.08)   (amber bg -> terra cotta bg)
+
+RED WARNING (border-color)
+  rgba(248,113,113,0.3)        ->  rgba(220,104,104,0.25)  (red warning border -> muted red)
+
+-----------------------------------------------------
+Occurrence counts (from grep of ch-*.html):
+  64x  color:#ccc
+  27x  color:#aaa
+  21x  color:#eee
+  16x  color:#f87171
+  15x  color:#4a9
+  13x  color:#a84
+  13x  color:#48a
+   9x  color:#888
+   7x  border-color:rgba(0,255,102,0.4)
+   6x  color:#4ade80
+   6x  border-color:rgba(0,255,102,0.3)
+   3x  color:#666
+   3x  background:rgba(68,170,153,0.1)
+   3x  background:rgba(68,136,170,0.1)
+   3x  background:rgba(170,136,68,0.1)
+   2x  color:#555
+   2x  border-color:rgba(248,113,113,0.3)
+   2x  background:rgba(0,255,102,0.03)
+   1x  color:rgba(0,255,102,0.5)
+   1x  color: rgba(0,255,102,0.5)
+   1x  border-color: rgba(0,255,102,0.5)
