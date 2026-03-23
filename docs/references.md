@@ -123,7 +123,45 @@
 
 ---
 
-## 7. Misc Tools & Tips
+## 7. Browser Automation Landscape (AI 浏览器自动化)
+
+**三条路线：** Vision-based（截图像素理解）、Structure-based（DOM/Accessibility Tree）、Hybrid（AI + Code 混合）。趋势收敛到 Structure-first, Vision-fallback。
+
+### Agent Layer — 端到端自主浏览器 Agent
+
+| Project | Link | TLDR |
+|---------|------|------|
+| browser-use | [GitHub](https://github.com/browser-use/browser-use) | Python Agent 框架，Vision + DOM 双模式，支持多 LLM，自带 Agent loop + Cloud 托管，MIT |
+| Skyvern | [GitHub](https://github.com/Skyvern-AI/skyvern) | 纯 Vision 驱动，swarm of agents 架构，不依赖 DOM，对任何 UI 都能工作，适合表单填写/电商自动化 |
+| LaVague | [GitHub](https://github.com/lavague-ai/LaVague) | World Model + Action Engine 双层架构，解耦推理与执行，支持 Selenium/Playwright/Extension，学术味最浓 |
+
+### SDK / Hybrid Layer — AI + 代码混合控制
+
+| Project | Link | TLDR |
+|---------|------|------|
+| Stagehand | [GitHub](https://github.com/browserbase/stagehand) | Browserbase 出品，TypeScript SDK，三个核心方法 act()/agent()/extract()，auto-caching + self-healing，"write once, run forever" |
+| Anthropic Computer Use | [GitHub](https://github.com/anthropics/anthropic-quickstarts/tree/main/computer-use-demo) | Anthropic 官方，纯截图 + 坐标点击，不限于浏览器可操控整个桌面，Docker 隔离运行 |
+
+### Tool / Interface Layer — 给 LLM 提供浏览器工具
+
+| Project | Link | TLDR |
+|---------|------|------|
+| playwright-mcp | [GitHub](https://github.com/microsoft/playwright-mcp) | Microsoft 出品，MCP Server，基于 Accessibility Tree 而非截图，不需要 Vision Model，适合探索性自动化和长时间 session |
+| playwright-cli | [GitHub](https://github.com/microsoft/playwright-cli) | Microsoft 出品，Shell CLI，token 开销最小，专为 coding agent 设计，适合在写代码的同时偶尔操控浏览器 |
+
+---
+
+## 8. Multi-Agent Collaboration (多 Agent 协作工具)
+
+| Project | Link | TLDR |
+|---------|------|------|
+| cmux | [cmux.com](https://cmux.com/zh-CN) | AI 版 tmux，原生 macOS + Ghostty 渲染，侧边栏 + 分屏 + 内置浏览器 + 通知环，专为多 Agent 并行设计，免费开源 |
+| cmux-skill | [GitHub](https://github.com/jiahao-shao1/cmux-skill) | 让 Claude Code 操控 cmux：分屏管理、跨 pane 通讯、浏览器/侧边栏控制 |
+| claude-peers-mcp | [GitHub](https://github.com/louislva/claude-peers-mcp) | 多 Claude Code 实例间即时通讯，Broker Daemon (localhost:7899 + SQLite)，支持 list_peers/send_message/set_summary，自动清理死 peer |
+
+---
+
+## 9. Misc Tools & Tips
 
 | Item | Link / Detail |
 |------|---------------|

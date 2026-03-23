@@ -22,3 +22,4 @@ venv/
 # Claude Code
 .claude/
 .superpowers/
+.playwright-cli/
